@@ -14,7 +14,7 @@ import java.util.Scanner;
  *                  ReceiveThread将获取的socket存入集合中，send都遍历这个集合，实现群发功能
  *                  但是由于阻塞，所以一个线程不能处理多个socket，所以必须一个线程处理一个socket，创建线程的时候必须传入socket,main中每次接收一个，就创建对应的接收线程
  *                  群发消息流程是创建对应的接收线程后，将socket加入集合，遍历集合socket，给每个回话发送消息，而且输入scanner只输入一次，所以在main中输入
- *                  由于这个输入会阻塞，后面有连接到来的时候服务端accept执行不到，所以将输入做成线程，防止阻塞
+ *                  由于这个输入会阻塞，后面有连接到来的时候服务端accept执行不到，所以将输入做成线程，防止阻塞.
  */
 @SuppressWarnings("all")
 public class ChatServer {
